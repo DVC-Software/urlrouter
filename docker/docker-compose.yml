@@ -1,0 +1,11 @@
+version: "3"
+services: 
+  dvc_url_router:
+    image: nginx:latest
+    container_name: dvc_url_router
+    ports: 
+      - 80:80
+    restart: always
+    env_file: 
+      - ${PWD}/docker/dev-env.rc
+    tty: true
